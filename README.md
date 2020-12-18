@@ -1,6 +1,16 @@
 # Wisconsin Autonomous Resources
 
-This is primarily for storing images and resources used in README's for [Wisconsin Autonomous](https://wisconsinautonomous.org/).
+This is primarily for storing images and resources for [Wisconsin Autonomous](https://wisconsinautonomous.org/).
+
+## Guides
+- [SSH](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/SSH.md)
+- [JupyterHub](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/JupyterHub.md)
+
+## Support
+
+Contact [Aaron Young](aryoung5@wisc.edu) for any questions or concerns regarding the contents of this repository.
+
+## See Also
 
 Stay up to date with our technical info by following our [blog](https://www.wisconsinautonomous.org/blog).
 
