@@ -3,8 +3,10 @@
 This is primarily for storing images and resources for [Wisconsin Autonomous](https://wisconsinautonomous.org/).
 
 ## Guides
-- [SSH](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/SSH.md)
+- [Git](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/Git.md)
 - [JupyterHub](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/JupyterHub.md)
+- [Package Managers](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/PackageManagers.md)
+- [SSH](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/SSH.md)
 
 ## Support
 
