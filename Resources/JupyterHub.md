@@ -11,6 +11,7 @@ _Last Update_: Friday, December 18th, 2020
   - [Initializing an SSH Tunnel](#initializing-an-ssh-tunnel)
   - [Opening JupyterHub in your Browser](#opening-jupyterhub-in-your-browser)
 - [Running](#running)
+- [Management](#management)
 - [Support](#support)
 - [See Also](#see-also)
 
@@ -34,6 +35,31 @@ Your computer should now have access to the JupyterHub server. To open up Jupyte
 ## Running
 
 `TODO`
+
+## Management
+
+This JupyterHub instance was configured with simplicity and scalability in mind. Because long term changes were unknown at the time (whether we will get more workstations, number of users, etc.), [The Little JupyterHub](https://tljh.jupyter.org/en/latest/) was not chosen here. Instead, [this tutorial](https://jupyterhub.readthedocs.io/en/stable/installation-guide-hard.html) was followed to configure the system.
+
+For your convenience, a installation guide is described below. Only information regarding configuration is given in here. Some steps vary from the original tutorial, so please refer to this guide if the goal is to configure the system.
+
+### Setting up JupyterHub
+
+The JupyterHub instance was created in a virtualenv located at `/opt/jupyterhub`. As you'll see later, this is the location we will place many configuration based files.
+
+The `jupyterhub_config.py` file, the main file that manages the system configuration for JupyterHub, is located at `/opt/jupyterhub/etc/jupyterhub/` (within the virtualenv we created earlier). By default, the user interface is set to display as JupyterLab, which is essentially a newer release of Jupyter Notebook with extended IDE-like features. To changes this, set the following option in the `jupyterhub_config.py` file (currently it's set to `/lab`):
+```yaml
+c.Spawner.default_url = '/tree'
+```
+
+To have JupyterHub run on startup, a system service used and run by [Systemd](https://man7.org/linux/man-pages/man1/systemd.1.html). The `.service` file is located at `/opt/jupyterhub/etc/systemd/jupyterhub.service`. There shouldn't be much to change here, but this basically just runs JupyterHub and loads in the config file we created.
+
+[Anaconda](https://docs.conda.io/en/latest/) was used for managing different Python environments. Anaconda is managed using modulefiles, of which we wrote a [readme about](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/JupyterHub.md). The location of the `conda` environments deviates from the original guide because of the `modulefile` management system. A default `conda` environment was made with only a few packages. Since it is a global install, `pip install` or `conda install` isn't allowed. Instead, users should create their own conda environment to have custom installs.
+
+Furthermore, located within the `jupyterhub_config.py`, the `autonomous-sudo` user group has been configured as admins of the JupyterHub instance.
+
+:exclamation: TODO: Details on how to setup conda env for user :exclamation:
+
+:exclamation: TODO: Security details. As of 1/5/2020 our domain (www.wisconsinautonomous.org) is owned by Wix.com, so will need to wait at a minimum 60 days to configure custom URL, i.e. still have to use `localhost:8000/jupyter` :exclamation:
 
 ## Support
 
