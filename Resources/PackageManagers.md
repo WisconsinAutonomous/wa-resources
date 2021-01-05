@@ -35,13 +35,13 @@ Homebrew has been made to be really simple to install. To install homebrew, you 
 
 `brew` has multiple helpful commands to install, update or configure your machine. A few of the most useful ones will be described below.
 
-`brew install` is used (as its name suggests) to install packages. For example, to install `git`, which is a version control tool [(we wrote a README on it)](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/Git.md), you would run `brew install git`.
+- `brew install` is used (as its name suggests) to install packages. For example, to install `git`, which is a version control tool [(we wrote a README on it)](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/Git.md), you would run `brew install git`.
 
-`brew install --cask` is a special install command that allows you to install larger, UI based applications. To install firefox, you would need to run `brew install --cask firefox`.
+- `brew install --cask` is a special install command that allows you to install larger, UI based applications. To install firefox, you would need to run `brew install --cask firefox`.
 
-`brew uninstall`, similar to `brew install`, is used to uninstall a package. As an example, to uninstall `git`, run `brew uninstall git`.
+- `brew uninstall`, similar to `brew install`, is used to uninstall a package. As an example, to uninstall `git`, run `brew uninstall git`.
 
-`brew search` allows you to search for a package and check if it exists. You can simply run `brew search python` to see all available packages with python in its name.
+- `brew search` allows you to search for a package and check if it exists. You can simply run `brew search python` to see all available packages with python in its name.
 
 `brew upgrade` and `brew update` are used for checking for updates and installing those updates. It makes sense to regularly run these commands to keep all download packages up-to-date. _Warning_: When a package is updated, other packages that depend on it (called dependencies) will also update which could affect other, unrelated packages.
 
