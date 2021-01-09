@@ -1,6 +1,6 @@
 # Wisconsin Autonomous Resources
 
-This is primarily for storing images and resources for [Wisconsin Autonomous](https://wisconsinautonomous.org/).
+This is primarily for storing images and resources for [Wisconsin Autonomous](https://wisconsinautonomous.org/). A secondary goal is to provide documentation for setting up/configuring various systems for future team leads or members.
 
 ## Guides
 - [Git](https://github.com/WisconsinAutonomous/wa-resources/blob/master/Resources/Git.md)
